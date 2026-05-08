@@ -1,0 +1,13 @@
+name: Cache Keep-Alive
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Warm Cloudflare cache
+        run: curl -fsS https://api.loam.today/trail_systems

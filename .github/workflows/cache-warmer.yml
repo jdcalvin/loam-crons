@@ -1,0 +1,20 @@
+name: Cache Warmer
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  warm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge Cloudflare cache
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CF_ZONE_ID }}/purge_cache" \
+            -H "Authorization: Bearer ${{ secrets.CF_CACHE_PURGE_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{"files":["https://api.loam.today/trail_systems"]}'
+
+      - name: Warm Cloudflare cache
+        run: curl -fsS https://api.loam.today/trail_systems
