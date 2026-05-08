@@ -1,0 +1,13 @@
+<svg width="175" height="58" xmlns="http://www.w3.org/2000/svg">
+  <svg x="0" y="6" width="37" height="46" viewBox="0 0 72 90">
+    <rect x="0" y="0"  width="72" height="16" rx="4" fill="#4ade80"/>
+    <rect x="0" y="19" width="72" height="16" rx="3" fill="#92633f"/>
+    <rect x="0" y="38" width="72" height="16" rx="3" fill="#6b4429"/>
+    <rect x="0" y="57" width="72" height="16" rx="3" fill="#4e2f19"/>
+    <rect x="0" y="76" width="72" height="14" rx="3" fill="#321f0f"/>
+  </svg>
+  <svg x="45" y="0" width="130" height="58" viewBox="0 0 120 58">
+    <text x="0" y="34" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="34" font-weight="600" fill="#2563eb" letter-spacing="-1">loam</text>
+    <text x="2" y="52" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="400" fill="#94a3b8" letter-spacing="3.5">.today</text>
+  </svg>
+</svg>
