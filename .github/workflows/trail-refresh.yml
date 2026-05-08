@@ -12,5 +12,5 @@ jobs:
       - name: Trigger refresh job
         run: |
           curl -fsS --max-time 120 \
-            -X POST "${{ secrets.API_URL }}/internal/jobs/refresh" \
+            -X POST "${{ secrets.REFRESH_URL }}" \
             -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}"
