@@ -1,4 +1,4 @@
-name: Cache Keep-Alive
+name: Server Keep-Alive
 
 on:
   schedule:
@@ -9,5 +9,5 @@ jobs:
   keep-alive:
     runs-on: ubuntu-latest
     steps:
-      - name: Warm Cloudflare cache
-        run: curl -fsS -o /dev/null https://api.loam.today/trail_systems
+      - name: Ping Render to prevent cold starts
+        run: curl -fsS -o /dev/null https://api.loam.today/up
