@@ -1,0 +1,16 @@
+name: Trail Conditions Refresh
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger refresh job
+        run: |
+          curl -fsS --max-time 120 \
+            -X POST "${{ secrets.API_URL }}/internal/jobs/refresh" \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}"
