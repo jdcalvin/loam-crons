@@ -17,4 +17,4 @@ jobs:
             --data '{"files":["https://api.loam.today/trail_systems"]}'
 
       - name: Warm Cloudflare cache
-        run: curl -fsS https://api.loam.today/trail_systems
+        run: curl -fsS -o /dev/null https://api.loam.today/trail_systems
